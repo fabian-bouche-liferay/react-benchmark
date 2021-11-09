@@ -1,0 +1,40 @@
+{
+	"name": "beta",
+	"version": "1.0.0",
+	"description": "Beta",
+	"devDependencies": {
+		"liferay-npm-bundler": "^2.26.0",
+		"liferay-npm-build-support": "^2.26.0",
+		"copy-webpack-plugin": "4.6.0",
+		"webpack": "4.29.6",
+		"webpack-cli": "3.3.0",
+		"webpack-dev-server": "3.2.1",
+		"@babel/cli": "^7.7.5",
+		"@babel/core": "^7.7.5",
+		"@babel/preset-env": "^7.7.6",
+		"@babel/preset-react": "^7.7.4"
+	},
+	"dependencies": {
+		"@mui/material": "^5.1.0",
+		"@emotion/react": "^11.5.0",
+		"@emotion/styled": "^11.3.0",
+		"react": "17.0.2",
+		"react-dom": "17.0.2"
+	},
+	"scripts": {
+		"build": "babel --source-maps -d build src && npm run copy-assets && liferay-npm-bundler",
+		"copy-assets": "lnbs-copy-assets",
+		"translate": "lnbs-translate",
+		"deploy": "npm run build && lnbs-deploy",
+		"start": "lnbs-start"
+	},
+	"portlet": {
+		"com.liferay.portlet.display-category": "category.sample",
+		"com.liferay.portlet.header-portlet-css": "/css/styles.css",
+		"com.liferay.portlet.instanceable": true,
+		"javax.portlet.name": "beta",
+		"javax.portlet.security-role-ref": "power-user,user",
+		"javax.portlet.resource-bundle": "content.Language"
+	},
+	"main": "index.js"
+}

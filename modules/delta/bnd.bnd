@@ -1,0 +1,6 @@
+Bundle-Name: delta
+Bundle-SymbolicName: com.liferay.samples.fbo.react.benchmark.delta
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.samples.fbo.react.benchmark.delta.constants
+
+Web-ContextPath: /delta-app

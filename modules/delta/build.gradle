@@ -1,0 +1,27 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+}
+
+buildscript {
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins.node", version: "latest.release"
+	}
+
+	repositories {
+		mavenLocal()
+
+		maven {
+			url "https://repository-cdn.liferay.com/nexus/content/groups/public"
+		}
+	}
+}
+
+apply plugin: "com.liferay.node"
+
+task buildWebpack(type: com.liferay.gradle.plugins.node.tasks.ExecutePackageManagerTask) {
+	args = ["run", "prebuild"]
+}
+
+build.dependsOn buildWebpack

@@ -1,0 +1,13 @@
+{
+	"translatorTextKey": "",
+	"supportedLocales": [],
+	"liferayDir": "D:\\missions\\2021\\q4\\react-benchmark\\wk\\react-benchmark\\bundles",
+	"webpack": {
+		"rules": [
+			{
+				"test": "src\\\\.*\\.js$",
+				"use": "babel-loader"
+			}
+		]
+	}
+}
