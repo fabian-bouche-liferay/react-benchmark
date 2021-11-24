@@ -1,5 +1,7 @@
 <%@ include file="/init.jsp" %>
 
+<div id="foo" data-foo="${configuration.foo()}"></div>
+
 <div id="delta-app" data-namespace="<portlet:namespace/>"></div>
 
 <script src="/o/delta-app/dist/engine.js"></script>
