@@ -1,0 +1,6 @@
+Bundle-Name: omicron
+Bundle-SymbolicName: com.liferay.samples.fbo.react.benchmark.omicron
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.samples.fbo.react.benchmark.omicron.constants
+
+Web-ContextPath: /omicron-app

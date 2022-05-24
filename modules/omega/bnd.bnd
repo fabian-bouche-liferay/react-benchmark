@@ -1,0 +1,6 @@
+Bundle-Name: omega
+Bundle-SymbolicName: com.liferay.samples.fbo.react.benchmark.omega
+Bundle-Version: 1.0.0
+Export-Package: com.liferay.samples.fbo.react.benchmark.omega.constants
+
+Web-ContextPath: /omega-app
